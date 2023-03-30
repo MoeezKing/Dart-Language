@@ -1,0 +1,42 @@
+import 'dart:io';
+
+void main()
+{
+  print('\t\t\t\t <<===-WELCOME TO TEMPERATURE CONVERTER APP-===>> ');
+  int u=inputTemp();
+  if(u==1)
+    {
+      stdout.write('Enter the temperature in Celsius ->');
+    }else{
+    stdout.write('Enter the temperature in Fahrenheit ->');
+   }
+  double? temp=double.parse(stdin.readLineSync()!);
+
+  if(u==1)
+  {
+    toFahrenheit(temp);
+  }else{
+    toCelsius(temp);
+  }
+}
+int inputTemp()
+{
+  stdout.write('Select the unit for temperature \nEnter 1 for Celsius \nEnter 2 for Fahrenheit\n=-=>');
+  int? u=int.parse(stdin.readLineSync()!);
+  if(!(u==1 || u==2))
+  {
+    print('<--Wrong Input-->');
+    u=inputTemp();
+  }
+  return u;
+}
+void toCelsius(double t)
+{
+  double c=(5/9)*(t-32);
+  print('Temperature is ${c} °C');
+}
+void toFahrenheit(double t)
+{
+  double f=(t*9/5)+32;
+  print('Temperature is ${f} °F');
+}
