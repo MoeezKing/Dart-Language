@@ -19,7 +19,7 @@ String inputChr()
   String? str=stdin.readLineSync();
 
   if (str==null?true:str.length != 1) {
-    print('Invalid output . You have to Enter a single Character');
+    print('Invalid input . You have to Enter a single Character');
     str = inputChr();
   }
 
