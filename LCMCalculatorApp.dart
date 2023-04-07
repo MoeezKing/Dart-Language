@@ -2,7 +2,7 @@ import 'dart:io';
 
 main()
 {
-  print('****************LCD*******************');
+  print('****************LCM Calculator*******************');
   stdout.write('Enter 1st number :-');
   int? n1=int.parse(stdin.readLineSync()!);
   stdout.write('Enter 2nd number :-');
