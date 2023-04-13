@@ -13,6 +13,11 @@ double absoluteDifference(double n1,double n2)
 }
 void leastDifference(List<double> l)
 {
+  if(l.isEmpty || l.length==1)
+    {
+      print('There muust be one pair(2) elements in list to calculate least difference');
+      return;
+    }
   List<double> ld=[l[0],l[1]];
   double df=absoluteDifference(l[0], l[1]);
 
